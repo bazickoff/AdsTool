@@ -17,12 +17,12 @@ class ModifySmali
         implements Runnable {
     private ArrayList<String> lineContents;
     private HandleCallback callback;
-    private String pathFolderTool, gotStr, gotStr2;
+    private String pathFolderTool, AdID, Credit;
 
-    public ModifySmali(String pathTool, String getStr, String getStr2) {
+    public ModifySmali(String pathTool, String adID, String credit) {
         pathFolderTool = pathTool;
-        gotStr = getStr;
-        gotStr2 = getStr2;
+        AdID = adID;
+        Credit = credit;
     }
 
     public void haldleAppClass(String path, String str, int lines, boolean shouldEnc) throws IOException {
@@ -77,13 +77,14 @@ class ModifySmali
 
     public void run() {
         try {
-            haldleAppClass(this.pathFolderTool + "\\LibAds\\smali_classes2\\info\\mtad\\a\\a.smali", gotStr, 62, true);
-            haldleAppClass(this.pathFolderTool + "\\LibAds\\smali_classes2\\info\\mtad\\MTFullActivity.smali", gotStr2, 855, true);
-            haldleAppClass(this.pathFolderTool + "\\LibAds\\smali_classes2\\info\\mtad\\MTFullActivity$1.smali","UGxhdGlubW9kcy5jb20gLSBUaGUgZ2FtaW5nIGNvbW11bml0eQ==", 61, false); //force
+            haldleAppClass(this.pathFolderTool + "\\LibAds\\smali_classes2\\info\\mtad\\a\\a.smali", AdID, 62, true);
+            haldleAppClass(this.pathFolderTool + "\\LibAds\\smali_classes2\\info\\mtad\\MTFullActivity.smali", Credit, 855, true);
+            haldleAppClass(this.pathFolderTool + "\\LibAds\\smali_classes2\\info\\mtad\\MTFullActivity$1.smali",Credit, 61, true); //force
            // haldleAppClass(this.pathFolderTool + "\\LibAds\\smali_classes2\\info\\mtad\\MTFullActivity$1.smali", gotStr2, 61, true); //force
-            haldleAppClass(this.pathFolderTool + "\\LibAds\\info1\\mtad\\a\\a.smali", gotStr, 62, true);
-            haldleAppClass(this.pathFolderTool + "\\LibAds\\info1\\mtad\\MTFullActivity.smali", gotStr2, 714, true);
-            haldleAppClass(this.pathFolderTool + "\\LibAds\\info1\\mtad\\MTFullActivity$1.smali", "UGxhdGlubW9kcy5jb20gLSBUaGUgZ2FtaW5nIGNvbW11bml0eQ==", 61, false);
+            haldleAppClass(this.pathFolderTool + "\\LibAds\\info1\\mtad\\a\\a.smali", AdID, 62, true);
+            haldleAppClass(this.pathFolderTool + "\\LibAds\\info1\\mtad\\MTFullActivity.smali", Credit, 714, true);
+            haldleAppClass(this.pathFolderTool + "\\LibAds\\info1\\mtad\\MTFullActivity$1.smali", Credit, 61, true);
+           // haldleAppClass(this.pathFolderTool + "\\LibAds\\info1\\mtad\\MTFullActivity$1.smali", "UGxhdGlubW9kcy5jb20gLSBUaGUgZ2FtaW5nIGNvbW11bml0eQ==", 61, false);
            // haldleAppClass(this.pathFolderTool + "\\LibAds\\info1\\mtad\\MTFullActivity$1.smali", gotStr2, 61, true);
         } catch (IOException ex) {
             Logger.getLogger(ModifySmali.class.getName()).log(Level.SEVERE, null, ex);

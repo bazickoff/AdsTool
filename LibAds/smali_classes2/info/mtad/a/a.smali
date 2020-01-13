@@ -60,7 +60,7 @@
 
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
-    const-string v0, ""
+    const-string v0, "Y2EtYXBwLXB1Yi0zOTQwMjU2MDk5OTQyNTQ0LzEwMzMxNzM3MTJAY2EtYXBwLXB1Yi0zOTQwMjU2MDk5OTQyNTQ0LzEwMzMxNzM3MTI="
 	
     const/4 v1, 0x0
 

@@ -59,7 +59,7 @@
 
     if-gez v2, :cond_0
 
-    const-string v0, "UGxhdGlubW9kcy5jb20gLSBUaGUgZ2FtaW5nIGNvbW11bml0eQ=="
+    const-string v0, "U2FtcGxlIGFkIHVuaXQgSUQ="
 
     const/4 v1, 0x0
 

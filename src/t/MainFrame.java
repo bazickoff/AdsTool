@@ -66,13 +66,13 @@ public class MainFrame extends JFrame implements HandleCallback {
 
     public MainFrame() {
         initComponents();
-        setStatus("I: PMT Ads Tool v1.0.1 - Platinmods.com" +
-                "\nI: Clear framework cache if you are having problem compiling APK" +
+        setStatus("I: PMT Ads Tool v1.0.2" +
+                "\nI: Try Clear framework cache if compiling APK fails" +
                 "\n------------------------------------------" +
                 "\nIMPORTANT: After you injeted the ads, make sure to test on all Android versions as" +
-                "\npossible as you can since some games with ads doesn't work on some Android versions" +
+                "\npossible as you can because it may not work on some Android versions" +
                 "\n(e.g Permission issues). If the APK having issues, don't release the APK mod with ads!" +
-                "\nWe try hard to support all versions and apps/games but we can't fix unknown issues sadly");
+                "\nWe try hard to support all versions and apps/games but we can't fix unknown issues");
         FileDrop fileDrop = new FileDrop(System.out, this.tv_path_file, new Listener() {
             public void filesDropped(File[] files) {
                 try {
@@ -122,7 +122,7 @@ public class MainFrame extends JFrame implements HandleCallback {
         this.jLabel6 = new JLabel();
 
         setDefaultCloseOperation(3);
-        setTitle("PMT Ads Tool v1.0.1");
+        setTitle("PMT Ads Tool v1.0.2");
         setBackground(new Color(255, 255, 255));
         setResizable(false);
         this.jPanel1.setBackground(new Color(255, 255, 255));
@@ -385,7 +385,7 @@ public class MainFrame extends JFrame implements HandleCallback {
     }
 
     public void startCopySmali() {
-        setStatus("I: Copying lib folder...");
+        setStatus("I: Copying lib ads folder...");
     }
 
     public void changeManfeErrorMutidex(String appclass) {

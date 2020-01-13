@@ -712,7 +712,7 @@
 
     invoke-static {v0, p0}, Linfo/mtad/a;->a(Landroid/content/Context;Linfo/mtad/b;)V
 
-    const-string v0, "WW91ciBOYW1l"
+    const-string v0, "U2FtcGxlIGFkIHVuaXQgSUQ="
 
     const/4 v1, 0x0
 
